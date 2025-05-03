@@ -72,16 +72,8 @@ body {
   display: none;
 }
 
-.content {
-  margin: 0 auto;
-  padding: 2rem 10rem;
-}
-
 /* Beranda */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 5rem 2rem;
   background-color: var(--bg-color);
   text-align: center;
@@ -144,6 +136,31 @@ body {
 
 .download-button:hover {
   background-color: #45a049;
+}
+
+/* Tentang */
+.about {
+  padding: 4rem 2rem;
+  background-color: var(--bg-alt);
+  color: var(--text-color);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 /* Mobile */
