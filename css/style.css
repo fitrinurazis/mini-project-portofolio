@@ -1,4 +1,97 @@
+:root {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --primary-color: #3b82f6;
+  --nav-bg: #1e293b;
+  --card-bg: #334155;
+  --border-color: #475569;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100dvh;
+  margin: 0 auto;
+}
+
+/* navbar */
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10rem;
+  background-color: var(--nav-bg);
+}
+
+.navbar-logo img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease-in-out;
+  font-size: 1.2rem;
+}
+
+.navbar-menu a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-menu a.active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar-hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+#navbar-toggle {
+  display: none;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 2rem 10rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    background-color: var(--nav-bg);
+    padding-bottom: 1rem;
+  }
+
+  .navbar-hamburger {
+    display: block;
+  }
+
+  #navbar-toggle:checked + .navbar-hamburger + .navbar-menu {
+    display: flex;
+  }
 }
